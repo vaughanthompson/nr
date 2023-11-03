@@ -1,52 +1,268 @@
 /* research content css file */
 
-.researchContentContainer {
-    border: 1px solid red;
-}
 
 .researchContentContainer p {
     font-size: 16px;
     line-height: 26px;
     margin-bottom: 30px;
+    font-weight:600;
+    color: rgb(137,137,136);
 }
-.researchContentItem {
-    margin-left: 12%;
-    margin-right: 12%;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-bottom: 2px solid rgb(1, 159, 59);
-
+.researchContentContainer p.larger {
+    font-size: 19px;
+    line-height: 28px;
+    margin-bottom: 30px;
+    letter-spacing: 0.03em;
 }
-.researchContentItem > div {
-    border: 1px solid red;
+.researchContentContainer p.larger.light {
+    font-size: 19px;
+    font-weight:600;
 }
-
-.researchContentItem div.left {
-    flex-basis: 66%;
+.researchContentContainer p.link {
+    margin-bottom: 15px;
+    max-width:95%;
 }
-.researchContentItem div.right {
-    flex-basis: 30%;
+.researchContentContainer p.link a {
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(137,137,136);
+    text-decoration: underline;
+    font-weight: 600;
 }
-
+.researchContentContainer .textPanel a {
+    color: #c20000;
+}
+.researchContentContainer h2 {
+    font-size: 38px;
+    letter-spacing: 0.04em;
+}
 .researchContentItem h2.researchHeadline {
     padding-bottom: 15px;
     margin-bottom: 20px;
     border-bottom: 1px solid rgb(1, 159, 59);
-    font-size: 42px;
+}
+.researchContentItem h3 {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.researchContentItem div.textPanel h3 {
+    font-weight: 800;
 }
 
-.researchContentItem div.leftContent {
+
+/* icons */
+div.iconRow {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 0.6vw;
+    row-gap: 15px;
+}
+div.icon-list-icon {
+    flex: 0 0 135px;
+}
+div.icon-list-icon svg {
+    max-width:75px;
+    margin-bottom: 10px;
+}
+div.icon-list-icon span svg {
+    height:75px;
+}
+
+div.icon-list-icon a,
+div.icon-list-icon span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(137,137,136);
+    transition: 0.3s;
+    text-align: center;
+    font-weight:600;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+
+
+
+
+.researchContentItem {
+    margin-left: 12%;
+    margin-right: 12%;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    border-bottom: 2px solid rgb(1, 159, 59);
+}
+.researchContentItem div.left {
+    flex-basis: 66%;
+    padding-top: 1em;
+}
+.researchContentItem div.right {
+    flex-basis: 30%;
+    background-color: rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+.centredContent {
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+.centredContent > div.textContent {
+    text-align: center;
+    max-width: 1300px;
+    margin: 0px auto;
 }
 .researchContentItem div.leftContent > div {
     flex:1 1 30%;
 }
-.researchContentItem div.leftContent > div:first-of-type {
-    margin-right: 6%;
+
+
+.researchContentItem div.contentImg {
+    height: 76vw;
 }
 
+.researchContentItem div.textPanel {
+    padding: 5vw;
+}
+
+.researchMasthead {
+    padding-left: 12%;
+    padding-right: 12%;
+    min-height:70vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/researchImages/NutrientRescue-the-research_720x.jpg);
+}
+
+.researchMasthead div.textContent {
+    padding-top: 4em;
+    padding-bottom: 1em;
+}
+
+.col2.green {
+    background-color: rgb(227,239,223);
+}
+
+.col2.green div.textContent {
+    padding: 12% 12% 1.5em 12%;
+}
+.col2.green div.textContent p {
+    font-weight:300
+}
+div.justImage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 76vw;
+}
+.noborder {
+    border-bottom: none;
+}
+
+@media screen and (max-width: 1100px) {
+    div.iconRow {
+        column-gap: 20px;
+        row-gap: 30px;
+    }
+    .researchMasthead div.textContent h1 {
+        color: white;
+        line-height: 1em;
+    }
+    .researchMasthead {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .researchContentItem {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .researchContentItem div.right {
+        margin-top: 3em;
+    }
+    .researchContentItem div.leftContent > div:first-of-type {
+        margin-bottom: 3em;
+    }
+
+}
+
+@media screen and (min-width: 1100px) {
+    .researchContentItem {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .researchContentItem div.leftContent {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .researchContentItem div.right {
+        margin-top: 0;
+    }
+    .researchContentItem div.leftContent > div:first-of-type {
+        margin-right: 8%;
+    }
+    .researchContentItem div.contentImg {
+        height: 20vw;
+    }
+    div.icon-list-icon a:hover {
+        transform: translateY(-10px);
+    }
+    .centredContent {
+        margin-top: 6em;
+        margin-bottom: 5em;
+    }
+    .centredContent.inset {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .researchContentItem div.textPanel {
+        padding: 1.5vw 2vw;
+    }
+    .centredContent > div.textContent {
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+    .researchMasthead {
+        min-height:60vh;
+        align-items: center;
+        background-image: url(/researchImages/NutrientRescue_why_it_works_1944x.png);
+    }
+    .researchMasthead div.textContent {
+        max-width:420px;
+        padding-bottom: 4em;
+    }
+    .researchMasthead div.textContent h1 {
+        line-height: 1.25em;
+    }
+    .col2.green {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+        align-items: center;
+        min-height: 30vw;
+    }
+    .col2.green > div {
+        flex: 0 1 50%;
+    }
+    .col2.green div.textContent {
+        padding: 5em 6% 4em 12%;
+        flex-basis: 38%;
+    }
+    div.justImage {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+        align-self: stretch;
+    }
+    .researchContentItem {
+        padding-bottom: 6em;
+    }
+}
 
